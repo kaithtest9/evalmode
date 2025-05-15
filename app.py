@@ -81,6 +81,10 @@ def exec_code():
             "traceback": tb,
             "stdout": stdout_buf.getvalue(),
         }), 500
+    
+@app.route("/", methods=["GET"])
+def index():
+    return "Evalmode remote-exec server is running."
 
 # ───────────── entry point ─────────────
 if __name__ == "__main__":
